@@ -1,0 +1,243 @@
+body {
+    background: #3C3D3F;
+    font-family: 'Montserrat', sans-serif;
+    color: #e0e0e0;
+    margin: 0;
+    
+}
+
+ul {
+    margin: 0;
+}
+
+.navbar {
+
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    background: transparent;
+    padding: 2%;
+}
+
+.dropdown-menu {
+    position: relative;
+    background: #3C3D3F;
+    border-radius: 10px;
+}
+
+
+
+
+.dropdown-button {
+    display: none;
+    cursor: pointer;
+    background-color: #3C3D3F;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 8px 8px 16px #2b2b2b,
+                -8px -8px 16px #4b4b4b;
+}
+
+.navbar-right {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+
+.navbar a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.4em; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.outer-card {
+    width: 60% !important;
+    margin: 0 auto;  /* Centers the card horizontally */
+}
+
+.experiences {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card {
+    background: #303234;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 2%;
+    width: 80%;
+    box-shadow: 9px 9px 16px #000000, -9px -9px 16px #494949;
+}
+
+.inner-card{
+    box-shadow: 9px 9px 16px #000000, -9px -9px 16px #494949;
+    transition: box-shadow 0.3s ease;
+}
+
+
+.profile-pic {
+    max-height: 25vh;  /* Adjust as needed */
+    margin-right: 20px;
+    padding: 0.5%;
+    border-radius: 50%;
+    box-shadow: 9px 9px 16px #000000, -9px -9px 16px #494949;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    width: 60%;
+}
+
+.description {
+    width: 90%;  /* Adjust as needed */
+    padding-left: 3%
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.socials button {
+    background: #303234;
+    border-radius: 50%;
+    box-shadow: 4px 4px 8px #000000, -4px -4px 8px #494949;
+    margin: 0 5%;
+    border: none;
+    padding: 10px;
+}
+
+.socials a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.socials i {
+    font-size: 1.5em;
+}
+
+.socials button:hover {
+    box-shadow: inset 1px 1px 2px #000000, inset -1px -1px 2px #494949;
+}
+
+.date {
+    font-size: 0.8em;  /* Adjust as needed */
+}
+
+.job-description {
+    font-size: 1.1em;  /* Adjust as needed */
+}
+
+.description-and-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;  /* Adjust as needed */
+}
+
+.inner-card:hover {
+    box-shadow: inset 1px 1px 4px #000000, inset -1px -1px 4px #494949;
+}
+
+/* Portrait phones */
+@media (max-width: 576px) {
+    .navbar{
+        width: 90%
+    }
+
+    .navbar a {
+        font-size: 1em;
+    }
+    .card, .outer-card {
+        width: 85% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-me {
+        flex-direction: column;
+        align-items: center; /* Center aligns the child elements */
+    }
+    .description-and-socials {
+        align-items: center; /* Center aligns the description and socials */
+    }
+    .profile-pic {
+        margin-bottom: 20px; /* Adds some space between the photo and the description */
+    }
+
+    .dropdown-button {
+        display: block;
+    }
+
+    .navbar-right {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        list-style-type: none;
+        background: #3C3D3F;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 9px 9px 16px #000000, -9px -9px 16px #494949;
+    }
+
+    .navbar-right li {
+        list-style-type: none;
+        padding: 10px 20px;
+    }
+
+    .dropdown-menu:hover .navbar-right {
+        display: flex;
+        list-style-type: none;
+    }
+
+    
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .navbar a {
+        font-size: 1.2em;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center; /* Center aligns the child elements */
+    }
+    .description-and-socials {
+        align-items: center; /* Center aligns the description and socials */
+    }
+    .profile-pic {
+        margin-bottom: 20px; /* Adds some space between the photo and the description */
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
