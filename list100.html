@@ -1,67 +1,214 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>List 100 - Samriddhi Sinha</title>
     <link rel="icon" href="./assets/sam.png" sizes="16x16 32x32" type="image/png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        :root {
+            --bg-color: #e0e5ec;
+            --text-color: #555;
+            --primary-color: #e67e22;
+            --secondary-color: #3498db;
+            --success-color: #27ae60;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .neumorphic-inset {
+            background-color: var(--bg-color);
+            border-radius: 24px;
+            box-shadow: inset 6px 6px 12px #c1c9d2, inset -6px -6px 12px #ffffff;
+        }
+        .neumorphic-outset {
+            background-color: var(--bg-color);
+            border-radius: 24px;
+            box-shadow: 6px 6px 12px #c1c9d2, -6px -6px 12px #ffffff;
+        }
+        .neumorphic-outset-sm {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            box-shadow: 4px 4px 8px #c1c9d2, -4px -4px 8px #ffffff;
+        }
+        .neumorphic-outset-hover:hover {
+            box-shadow: 4px 4px 8px #c1c9d2, -4px -4px 8px #ffffff;
+        }
+        .neumorphic-outset-active:active {
+             box-shadow: inset 4px 4px 8px #c1c9d2, inset -4px -4px 8px #ffffff;
+        }
+        .neumorphic-card {
+            background-color: var(--bg-color);
+            border-radius: 16px;
+            box-shadow: 4px 4px 8px #c1c9d2, -4px -4px 8px #ffffff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .neumorphic-card:hover {
+            box-shadow: 6px 6px 12px #c1c9d2, -6px -6px 12px #ffffff;
+            transform: translateY(-2px);
+        }
+        .neumorphic-card.completed {
+            background: linear-gradient(135deg, #e8f5e8, #d4edda);
+            box-shadow: 4px 4px 8px #b8c8b8, -4px -4px 8px #f0f8f0;
+        }
+        .neumorphic-card.completed:hover {
+            box-shadow: 6px 6px 12px #b8c8b8, -6px -6px 12px #f0f8f0;
+        }
+        .progress-container {
+            background-color: var(--bg-color);
+            border-radius: 20px;
+            box-shadow: inset 4px 4px 8px #c1c9d2, inset -4px -4px 8px #ffffff;
+            overflow: hidden;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            border-radius: 20px;
+            height: 100%;
+            transition: width 0.5s ease-in-out;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .check-icon {
+            color: var(--success-color);
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
-<body>
-    <nav>
-        <ul class="navbar">
-            <li><a href="index.html">Samriddhi Sinha</a></li>
-            <li>
-                <div class="dropdown-menu">
-                    <div class="dropdown-button">&#9776;</div>
-                    <ul class="navbar-right">
-                        <li><a href="https://www.samriddhisinha.com/">Home</a></li>
-                        <li><a href="list100.html">List 100</a></li>
-                    </ul>
+<body class="antialiased">
+    <div class="container mx-auto max-w-6xl px-4 py-8">
+        <header class="flex justify-between items-center mb-12">
+            <h1 class="text-2xl font-bold">Samriddhi Sinha</h1>
+            <nav class="flex items-center space-x-2 text-lg">
+                <a class="text-gray-500 hover:text-gray-700 px-4 py-2 rounded-xl hover:neumorphic-outset-sm transition-all" href="index.html">Home</a>
+                <a class="text-gray-700 font-medium px-4 py-2 rounded-xl neumorphic-outset-sm neumorphic-outset-active transition-all" href="#">List 100</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="neumorphic-outset p-8 mb-8">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold mb-4">List 100</h2>
+                    <p class="text-gray-500 text-lg mb-6">
+                        Inspired by Chip Huyen's 
+                        <a href="https://huyenchip.com/list-100/" class="text-blue-500 hover:text-blue-700 transition-colors">List 100</a>
+                    </p>
+                    <div class="progress-container h-6 max-w-md mx-auto">
+                        <div class="progress-bar" style="width: 11.11%;"></div>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-2">1 of 9 completed (11%)</p>
                 </div>
-            </li>
-        </ul>
-    </nav>
-    
-    <div class="list-container">
-        <h1>List 100</h1>
-        <h6 style="text-align: center;">Inspired by Chip Huyen's <a href="https://huyenchip.com/list-100/" style="color: lightgray">List 100</a></h6>
-        <div class="progress-container">
-            <div class="progress-bar" style="width: 0%;"></div>
-        </div>
-        <br>
-        <div class="card-grid">
-            <div class='neumorphic-card'>
-                <strong>Start</strong> a company. 
-            </div>
-            <div class='neumorphic-card'>
-                Go on a vacation in <strong>Europe</strong> 
-            </div>
-            <div class='neumorphic-card'>
-                Publish a <strong>research paper</strong>
-            </div>
-            <div class='neumorphic-card'>
-                Author a <strong>patent</strong>
-            </div>
-            <div class='neumorphic-card'>
-                Participate in a <strong>powerlifting</strong> competition
-            </div>
-            <div class='neumorphic-card'>
-                Achieve sub-20 <strong>body-fat percentage</strong>
-            </div>
-            <div class='neumorphic-card'>
-                Buy a <strong>car</strong>
-            </div>
-            <div class='neumorphic-card'>
-                Learn to play the <strong>guitar</strong>
-            </div>
-            <div class='neumorphic-card'>
-                Climb a <strong>snow covered mountain</strong>
-            </div>
-        </div>
+            </section>
+
+            <section class="mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="neumorphic-card p-6 completed" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg"><strong>Start</strong> a company</span>
+                            <span class="material-icons check-icon">check_circle</span>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">Go on a vacation in <strong>Europe</strong></span>
+                            <span class="material-icons text-gray-300">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">Publish a <strong>research paper</strong></span>
+                            <span class="material-icons text-gray-300">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">Author a <strong>patent</strong></span>
+                            <span class="material-icons text-gray-300">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">Participate in a <strong>powerlifting</strong> competition</span>
+                            <span class="material-icons text-gray-300">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">Achieve sub-20 <strong>body-fat percentage</strong></span>
+                            <span class="material-icons text-gray-300">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">Buy a <strong>car</strong></span>
+                            <span class="material-icons text-gray-300">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">Learn to play the <strong>guitar</strong></span>
+                            <span class="material-icons text-gray-300">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                        <div class="flex items-center justify-between">
+                            <span class="text-lg">Climb a <strong>snow covered mountain</strong></span>
+                            <span class="material-icons text-gray-300">radio_button_unchecked</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function toggleCard(card) {
+            const icon = card.querySelector('.material-icons');
+            const isCompleted = card.classList.contains('completed');
+            
+            if (isCompleted) {
+                card.classList.remove('completed');
+                icon.textContent = 'radio_button_unchecked';
+                icon.className = 'material-icons text-gray-300';
+            } else {
+                card.classList.add('completed');
+                icon.textContent = 'check_circle';
+                icon.className = 'material-icons check-icon';
+            }
+            
+            updateProgress();
+        }
+        
+        function updateProgress() {
+            const totalCards = document.querySelectorAll('.neumorphic-card').length;
+            const completedCards = document.querySelectorAll('.neumorphic-card.completed').length;
+            const percentage = (completedCards / totalCards) * 100;
+            
+            const progressBar = document.querySelector('.progress-bar');
+            const progressText = document.querySelector('.progress-container').parentElement.querySelector('p');
+            
+            progressBar.style.width = percentage + '%';
+            progressText.textContent = `${completedCards} of ${totalCards} completed (${Math.round(percentage)}%)`;
+        }
+        
+        // Initialize progress on page load
+        updateProgress();
+    </script>
 </body>
 </html>

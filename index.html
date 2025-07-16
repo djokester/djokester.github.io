@@ -1,104 +1,130 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Samriddhi Sinha</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Samriddhi Sinha: Founder of Progno AI, a healthtech product leveraging artificial intelligence for automating the way electronic health records are created.">
-    <meta name="keywords" content="Samriddhi Sinha, Machine Learning Engineer, Artificial Intelligence, Healthcare AI, Natural Language Processing, Deep Learning, Generative AI, Artificial Intelligence">
-    <link rel="icon" href="./assets/sam.png" sizes="16x16 32x32" type="image/png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Samriddhi Sinha: Machine Learning Engineer specializing in NLP and Deep Learning">
-    <meta name="keywords" content="Samriddhi Sinha, Machine Learning Engineer, Natural Language Processing, Deep Learning, Generative AI, Artificial Intelligence">
-
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Samriddhi Sinha - Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<style type="text/tailwindcss">
+        :root {
+            --bg-color: #e0e5ec;
+            --text-color: #555;
+            --primary-color: #e67e22;
+            --secondary-color: #3498db;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .neumorphic-inset {
+            background-color: var(--bg-color);
+            border-radius: 24px;
+            box-shadow: inset 6px 6px 12px #c1c9d2, inset -6px -6px 12px #ffffff;
+        }
+        .neumorphic-outset {
+            background-color: var(--bg-color);
+            border-radius: 24px;
+            box-shadow: 6px 6px 12px #c1c9d2, -6px -6px 12px #ffffff;
+        }
+        .neumorphic-outset-sm {
+            background-color: var(--bg-color);
+            border-radius: 12px;
+            box-shadow: 4px 4px 8px #c1c9d2, -4px -4px 8px #ffffff;
+        }
+        .neumorphic-outset-hover:hover {
+            box-shadow: 4px 4px 8px #c1c9d2, -4px -4px 8px #ffffff;
+        }
+        .neumorphic-outset-active:active {
+             box-shadow: inset 4px 4px 8px #c1c9d2, inset -4px -4px 8px #ffffff;
+        }
+        .neumorphic-circle {
+            background-color: var(--bg-color);
+            border-radius: 9999px;
+            box-shadow: 6px 6px 12px #c1c9d2, -6px -6px 12px #ffffff;
+        }
+        .neumorphic-circle-sm {
+             background-color: var(--bg-color);
+            border-radius: 9999px;
+            box-shadow: 4px 4px 8px #c1c9d2, -4px -4px 8px #ffffff;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul class="navbar">
-            <li><a href="#">Samriddhi Sinha</a></li>
-            <li>
-                <div class="dropdown-menu">
-                    <div class="dropdown-button">&#9776;</div>
-                    <ul class="navbar-right">
-                        <li><a href="https://www.samriddhisinha.com/">Home</a></li>
-                        <li><a href="./list100.html">List 100</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
-    <div class="container">
-        <!-- About Me Card -->
-        <div class="card about-me">
-            <img class="profile-pic" src="./assets/profile.jpeg" alt="Profile Picture">
-            <div class="description-and-socials">
-                <div class="description">
-                    <h1>About Me</h1>
-                    <h2>Samriddhi Sinha</h2>
-                    <h3>I teach machines how to learn human language.</h3>
-                    <h4>Work primarily in the intersection of the fields of Natural Language Processing and Deep Learning. Loves crafting holy grail long shot solutions to moon shot problems. Passionate about open source and have actively been part of the open-source community in the past. A huge caffeine addict and an amateur chef who loves to cook as much as he loves to eat.</h4>
-                    <!-- Add social media links here -->
-                    <div class="socials">
-                        <button><a href="https://www.linkedin.com/in/samriddhisinha/"><i class="fab fa-linkedin"></i></a></button>
-                        <button><a href="https://github.com/djokester"><i class="fab fa-github"></i></a></button>
-                        <button><a href="https://www.instagram.com/_djokester_/"><i class="fab fa-instagram"></i></a></button>
-                        <button><a href="https://twitter.com/_djokester_"><i class="fab fa-twitter"></i></a></button>
-                    </div>
-                </div>
-            </div>
-        </div>        
-        <!-- Experience Cards -->
-        <div class="card outer-card">
-            <div class="experiences">
-                <h1>Experiences</h1>
-                    <div class="card inner-card">
-                        <h3>Progno AI</h3>
-                        <h4>Founder</h4>
-                        <p class="date"><i class="far fa-calendar-alt"></i> November, 2023 - Present</p>
-                        <p class="job-description">Progno AI is a healthcare startup that leverages artificial intelligence to automate the entire patient data workflow, providing doctors with more time for informed decision-making and access to comprehensive data for enhanced analysis and patient care</p>
-                    </div>
-                <!-- Experience Card 1 -->
-                    <div class="card inner-card">
-                        <h3>Auquan</h3>
-                        <h4>Machine Learning Engineer</h4>
-                        <p class="date"><i class="far fa-calendar-alt"></i> December, 2022 - Present</p>
-                        <p class="job-description">Developing and deploying NLP models for automated financial news analysis, including risk identification and uncovering investment opportunities for private investors.</p>
-                    </div>
-                    <!-- Experience Card 2 -->
-                    <div class="card inner-card">
-                        <h3>Babblebots</h3>
-                        <h4>Machine Learning Engineer</h4>
-                        <p class="date"><i class="far fa-calendar-alt"></i> October, 2021 - June, 2021</p>
-                        <p class="job-description">Helped the development of an AI-powered voice-based platform that creates near-human conversational experiences, leveraging speech and language technology to revolutionize the way interviews are conducted. Played a key role in setting up the company's initial infrastructure and engineering architecture as one of the first employees at this early-stage startup.</p>
-                    </div>
-                    <!-- Experience Card 3 -->
-                    <div class="card inner-card">
-                        <h3>Chefling Inc</h3>
-                        <h4>Machine Learning Engineer</h4>
-                        <p class="date"><i class="far fa-calendar-alt"></i> February, 2021 - October, 2021</p>
-                        <p class="job-description">Led the Machine Learning efforts at Chefling, a smart kitchen assistant app that helps users plan meals, shop for groceries, and cook at home. I leveraged my passion for food and expertise in machine learning to create innovative solutions for recipe structuring, ingredient parsing, recipe recommendations, and nutrient estimation. As a foodie, enthusiastic cook, and avid user of health and calorie-tracking apps, this role was the perfect fit for me to apply my technical skills to a field I am truly passionate about.</p>
-                    </div>
-                    <!-- Experience Card 4 -->
-                    <div class="card inner-card">
-                        <h3>Fractal</h3>
-                        <h4>Data Scientist</h4>
-                        <p class="date"><i class="far fa-calendar-alt"></i> May, 2019 - February, 2021</p>
-                        <p class="job-description">Data Scientist working on the NLP backend of an Artifical Business Analyst. Primarily involved in the development and deployment of algorithms for entity detection and semantic disambiguation in a question answering system.</p>
-                    </div>
-                <!-- Add more cards for each job experience -->
-            </div>
-        </div>
+<body class="antialiased">
+<div class="container mx-auto max-w-4xl px-4 py-8">
+<header class="flex justify-between items-center mb-12">
+<h1 class="text-2xl font-bold">Samriddhi Sinha</h1>
+<nav class="flex items-center space-x-2 text-lg">
+<a class="text-gray-700 font-medium px-4 py-2 rounded-xl neumorphic-outset-sm neumorphic-outset-active transition-all" href="#">Home</a>
+<a class="text-gray-500 hover:text-gray-700 px-4 py-2 rounded-xl hover:neumorphic-outset-sm transition-all" href="./list100.html">List 100</a>
+</nav>
+</header>
+<main>
+<section class="neumorphic-outset p-8 mb-12" id="about">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<img alt="A portrait of Samriddhi Sinha, smiling." class="w-40 h-40 object-cover neumorphic-circle" src="./assets/profile.jpeg"/>
+<div class="text-center md:text-left">
+<h2 class="text-3xl font-bold mb-2">About Me</h2>
+<h3 class="text-xl font-semibold text-gray-600 mb-4">Samriddhi Sinha</h3>
+<p class="text-gray-500 leading-relaxed mb-6">
+                            I teach machines how to learn human language.
+                            <br/><br/>
+                            Work primarily in the intersection of the fields of Machine Learning, Product, and User Experience. Love crafting helpful and great solutions to meet user's needs.
+                            Along the way of my journey, I've founded startups and have built products and community in the past. A huge caffeine addict and an amateur chef who loves to cook as much as he loves to eat.
+                        </p>                <div class="flex justify-center md:justify-start space-x-4">
+<a class="text-gray-500 hover:text-gray-700 p-3 neumorphic-outset-sm rounded-full neumorphic-outset-active transition-all" href="https://www.linkedin.com/in/samriddhisinha/"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+<a class="text-gray-500 hover:text-gray-700 p-3 neumorphic-outset-sm rounded-full neumorphic-outset-active transition-all" href="https://github.com/djokester"><i data-lucide="github" class="w-5 h-5"></i></a>
+<a class="text-gray-500 hover:text-gray-700 p-3 neumorphic-outset-sm rounded-full neumorphic-outset-active transition-all" href="https://www.instagram.com/_djokester_/"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+<a class="text-gray-500 hover:text-gray-700 p-3 neumorphic-outset-sm rounded-full neumorphic-outset-active transition-all" href="https://twitter.com/_djokester_"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-12" id="experiences">
+<h2 class="text-3xl font-bold text-center mb-8">Experiences</h2>
+<div class="space-y-8">
+<div class="neumorphic-outset p-6">
+<h3 class="text-xl font-bold">Progno AI</h3>
+<p class="text-gray-500 text-sm mb-1">Founder</p>
+<p class="text-gray-400 text-xs mb-4">November, 2023 - Present</p>
+<p class="text-gray-600">Progno AI is a healthcare startup that leverages artificial intelligence to automate the entire patient data workflow, providing doctors with more time for informed decision-making and access to comprehensive data for enhanced analysis and patient care</p>
+</div>
+<div class="neumorphic-outset p-6">
+<h3 class="text-xl font-bold">Auquan</h3>
+<p class="text-gray-500 text-sm mb-1">Machine Learning Engineer</p>
+<p class="text-gray-400 text-xs mb-4">December, 2022 - September, 2023</p>
+<p class="text-gray-600">Developing and deploying NLP models for automated information extraction, including risk identification and uncovering investment opportunities for private investors.</p>
+</div>
+<div class="neumorphic-outset p-6">
+<h3 class="text-xl font-bold">Babblebots AI</h3>
+<p class="text-gray-500 text-sm mb-1">Founding Machine Learning Engineer</p>
+<p class="text-gray-400 text-xs mb-4">October, 2021 - June, 2022</p>
+<p class="text-gray-600">Helped the development of an AI-powered voice-based platform that creates near-human conversational experiences, leveraging speech and language technology to revolutionize the way interviews are conducted. Played a key role in setting up the company's initial infrastructure and engineering architecture as one of the first employees at this early-stage startup.</p>
+</div>
+<div class="neumorphic-outset p-6">
+<h3 class="text-xl font-bold">Chefling Inc</h3>
+<p class="text-gray-500 text-sm mb-1">Machine Learning Engineer</p>
+<p class="text-gray-400 text-xs mb-4">February, 2021 - October, 2021</p>
+<p class="text-gray-600">Led the Machine Learning efforts at Chefling, a smart kitchen assistant app that helps users plan meals, shop for groceries, and cook at home. I leveraged my passion for food and expertise in machine learning to create innovative solutions for recipe structuring, ingredient parsing, recipe recommendations, and nutrient estimation. As a foodie, enthusiastic cook, and avid user of health and calorie-tracking apps, this role was the perfect fit for me to apply my technical skills to a field I am truly passionate about.</p>
+</div>
+<div class="neumorphic-outset p-6">
+<h3 class="text-xl font-bold">Fractal AI</h3>
+<p class="text-gray-500 text-sm mb-1">Data Scientist</p>
+<p class="text-gray-400 text-xs mb-4">July, 2016 - January, 2021</p>
+<p class="text-gray-600">Data Scientist working on the NLP backend of an Artifical Business Analyst. Primarily involved in the development and deployment of algorithms for entity detection and semantic disambiguation in a question answering system.</p>
+</div>
+</div>
+</section>
 
-        <!-- Substack Embed Card -->
-        <div class="card", style="width: 60%; display: flex;  justify-content: center; align-items: center;">
-            <iframe src="https://djokester.substack.com/embed" width="90%" height="400" style="border:0px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-        </div>
-    </div>
-<script src="script.js"></script>
+</main>
+</div>
 
-</body>
-</html>
+<script>
+    lucide.createIcons();
+</script>
+</body></html>
