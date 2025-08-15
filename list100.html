@@ -48,7 +48,6 @@
             border-radius: 16px;
             box-shadow: 4px 4px 8px #c1c9d2, -4px -4px 8px #ffffff;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
         .neumorphic-card:hover {
             box-shadow: 6px 6px 12px #c1c9d2, -6px -6px 12px #ffffff;
@@ -110,63 +109,63 @@
 
             <section class="mb-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="neumorphic-card p-6 completed" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6 completed">
                         <div class="flex items-center justify-between">
                             <span class="text-lg"><strong>Start</strong> a company</span>
                             <span class="material-icons check-icon">check_circle</span>
                         </div>
                     </div>
                     
-                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6">
                         <div class="flex items-center justify-between">
                             <span class="text-lg">Go on a vacation in <strong>Europe</strong></span>
                             <span class="material-icons text-gray-300">radio_button_unchecked</span>
                         </div>
                     </div>
                     
-                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6">
                         <div class="flex items-center justify-between">
                             <span class="text-lg">Publish a <strong>research paper</strong></span>
                             <span class="material-icons text-gray-300">radio_button_unchecked</span>
                         </div>
                     </div>
                     
-                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6">
                         <div class="flex items-center justify-between">
                             <span class="text-lg">Author a <strong>patent</strong></span>
                             <span class="material-icons text-gray-300">radio_button_unchecked</span>
                         </div>
                     </div>
                     
-                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6">
                         <div class="flex items-center justify-between">
                             <span class="text-lg">Participate in a <strong>powerlifting</strong> competition</span>
                             <span class="material-icons text-gray-300">radio_button_unchecked</span>
                         </div>
                     </div>
                     
-                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6">
                         <div class="flex items-center justify-between">
                             <span class="text-lg">Achieve sub-20 <strong>body-fat percentage</strong></span>
                             <span class="material-icons text-gray-300">radio_button_unchecked</span>
                         </div>
                     </div>
                     
-                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6">
                         <div class="flex items-center justify-between">
                             <span class="text-lg">Buy a <strong>car</strong></span>
                             <span class="material-icons text-gray-300">radio_button_unchecked</span>
                         </div>
                     </div>
                     
-                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6">
                         <div class="flex items-center justify-between">
                             <span class="text-lg">Learn to play the <strong>guitar</strong></span>
                             <span class="material-icons text-gray-300">radio_button_unchecked</span>
                         </div>
                     </div>
                     
-                    <div class="neumorphic-card p-6" onclick="toggleCard(this)">
+                    <div class="neumorphic-card p-6">
                         <div class="flex items-center justify-between">
                             <span class="text-lg">Climb a <strong>snow covered mountain</strong></span>
                             <span class="material-icons text-gray-300">radio_button_unchecked</span>
@@ -178,35 +177,19 @@
     </div>
 
     <script>
-        function toggleCard(card) {
-            const icon = card.querySelector('.material-icons');
-            const isCompleted = card.classList.contains('completed');
-            
-            if (isCompleted) {
-                card.classList.remove('completed');
-                icon.textContent = 'radio_button_unchecked';
-                icon.className = 'material-icons text-gray-300';
-            } else {
-                card.classList.add('completed');
-                icon.textContent = 'check_circle';
-                icon.className = 'material-icons check-icon';
-            }
-            
-            updateProgress();
-        }
-        
+        // Progress is computed from static markup (.completed classes) only.
         function updateProgress() {
             const totalCards = document.querySelectorAll('.neumorphic-card').length;
             const completedCards = document.querySelectorAll('.neumorphic-card.completed').length;
             const percentage = (completedCards / totalCards) * 100;
-            
+
             const progressBar = document.querySelector('.progress-bar');
             const progressText = document.querySelector('.progress-container').parentElement.querySelector('p');
-            
+
             progressBar.style.width = percentage + '%';
             progressText.textContent = `${completedCards} of ${totalCards} completed (${Math.round(percentage)}%)`;
         }
-        
+
         // Initialize progress on page load
         updateProgress();
     </script>
